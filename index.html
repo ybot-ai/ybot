@@ -77,9 +77,12 @@
             alert("Please add file with correct name");
             return false;
         }
-        p = document.createElement("p");
-        p.innerHTML = "File " + strName.input + " uploaded successfully.";
-        document.body.appendChild(p);
+
+        div = document.createElement("div");
+        div.className = "alert alert-success"
+        div.role = "alert"
+        div.innerHTML = "File " + strName.input + " uploaded successfully.";
+        document.body.prepend(div);
         return true;
     }
 
